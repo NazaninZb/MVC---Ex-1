@@ -1,0 +1,122 @@
+JFDML JFormDesigner: "7.0.0.6.255" Java: "1.8.0_202-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "dialogPane"
+				"border": new javax.swing.border.EmptyBorder( 12, 12, 12, 12 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {par l {seq l {space :::p, par l:::p {seq l {comp label1:::p:40:p, space :::p, comp modelsBox::::144:x}, seq l {par l {comp label3::l:p::p, comp namelbl::l:p:55:p}, space :::p, par l {comp nametxtf:::p:119:p, comp colorBox::::129:x}}}, space s:::p, par l {seq {comp label2:::p::p, space u:::p, comp buildSpinner:::::x}, seq {comp label4:::p::p, space u:::p, comp priseLbl:::p:83:p}}}, seq l {space :p:214:p, comp lastNamelbl:::p::p, space :p:14:p, comp lastNmaetxtf:::p:100:p}}, space :::x}, seq l {space :p:78:p, comp label5:::p:198:p, space ::98:x}}"
+					"$verticalGroup": "par l {seq l {par b {comp namelbl::b:p:27:p, comp lastNamelbl::b:p::p, comp lastNmaetxtf::b:p::p, comp nametxtf::b:p::p}, space :p:37:p, par b {comp label1::b:p::p, comp label2::b:p::p, comp buildSpinner::b:p::p, comp modelsBox::b:p::p}, space :p:32:p, par b {comp label3::b:p::p, comp colorBox::b:p::p, comp label4::b:p::p, comp priseLbl::b:p:30:p}, space :::p, comp label5:::p:27:p, space :0:10:x}}"
+				} ) {
+					name: "contentPanel"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "namelbl"
+						"text": "name :"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "nametxtf"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "lastNamelbl"
+						"text": "last name :"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "lastNmaetxtf"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label1"
+						"text": "model :"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "modelsBox"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "pride"
+							addElement( "pride" )
+							addElement( "pride_vanet" )
+							addElement( "l90" )
+							addElement( "belerriance" )
+						}
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label2"
+						"text": "build :"
+					} )
+					add( new FormComponent( "javax.swing.JSpinner" ) {
+						name: "buildSpinner"
+						"model": new javax.swing.SpinnerNumberModel( 80, 80, 98, 1 )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+						"text": "color :"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "colorBox"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "white"
+							addElement( "white" )
+							addElement( "black" )
+							addElement( "gray" )
+							addElement( "silver" )
+							addElement( "blue" )
+							addElement( "red" )
+							addElement( "green" )
+						}
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label4"
+						"text": "prise :"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "priseLbl"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label5"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "0:1.0, 80, 80"
+					"$rowSpecs": "0"
+					"$hGap": 5
+					"$vGap": 5
+				} ) {
+					name: "buttonBar"
+					"border": new javax.swing.border.EmptyBorder( 12, 0, 0, 0 )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "checkButton"
+						"text": "check"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "checkButtonMouseClicked", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "okButton"
+						"text": "OK"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "okButtonMouseClicked", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 0
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "cancelButton"
+						"text": "Cancel"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "cancelButtonMouseClicked", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 2
+						"gridy": 0
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "South"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 35, 0 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}
